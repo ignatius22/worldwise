@@ -1,13 +1,20 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Product from "./pages/Product";
+import Homepage from "./pages/Homepage";
+import PageNotFound from "./pages/PageNotFound";
+
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="products" element={<Product />}/>
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
