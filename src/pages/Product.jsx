@@ -22,6 +22,7 @@ export default function Product() {
             sequi officiis et.
           </p>
         </div>
+
       </section>
     </main>
   );
